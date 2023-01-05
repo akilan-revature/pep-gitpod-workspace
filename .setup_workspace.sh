@@ -15,15 +15,14 @@ git checkout cli-test
 
 git pull -X theirs
 
-bundle install
-rake install
-echo "Installed all dependencies."
-
 echo "source /workspace/pep-gitpod-workspace/revpro-autocomplete.sh;" >> ~/.bashrc
 echo "export REVPRO_CLI_REPORT_HOST=https://staging.res.revatu.re" >> ~/.bashrc
 source ~/.bashrc
-
 export REVPRO_CLI_REPORT_HOST=https://staging.res.revatu.re
+
+bundle install
+rake install
+echo "Installed all dependencies."
 
 if [[ -d "/workspace/revpro-cli/pep-labs" ]] ;
 then
